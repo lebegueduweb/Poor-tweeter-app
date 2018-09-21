@@ -145,16 +145,14 @@
             <thead>
               <tr>
                 <th scope="col">Date</th>
-                <th scope="col">Tweet title</th>
-                <th scope="col">message</th>
+                <th scope="col">Name title</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="article in articles">
                 <th scope="row">${article.date}</th>
-                <td>${article.article_heading}</td>
-                <td>${article.article_body}</td>
+                <td>${article.article_heading} ${article.article_body}</td>
                 <td>
                   <button class="btn btn-info" v-on:click="getArticle(article.article_id)">Edit</button>
                   <button class="btn btn-danger" v-on:click="deleteArticle(article.article_id)">Delete</button>
